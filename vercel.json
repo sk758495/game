@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "buildCommand": "npm install --legacy-peer-deps && npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "nextjs",
+  "regions": ["sin1"],
+  "public": false,
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=60, stale-while-revalidate=600"
+        }
+      ]
+    }
+  ],
+  "outputDirectory": ".next"
+}
