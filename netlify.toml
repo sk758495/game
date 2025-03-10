@@ -1,7 +1,8 @@
 [build]
-  base = "stroop-game-main"
-  publish = "out"
+  base = ""  # empty, as your project is in the root folder
+  publish = "out"  # for static export output folder
   command = "npm install --legacy-peer-deps && npm run build && npm run export"
+
 
 [dev]
   command = "npm run dev"
